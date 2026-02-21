@@ -1,47 +1,24 @@
 
 'use client';
 
-import React from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import {  Tech_Stck, certifications, cyberSkills } from '@/app/lib/data';
 import { SOCIAL_LINKS } from '@/app/lib/data';
-import Logo from './components/logo';
+import Link from 'next/link';
 
-const WebProjects = [
-  {
-    name: 'Ask AI',
-    description: 'An AI-powered tool that helps you find the right answers.',
-    link: 'https://academic-chatbot-eta.vercel.app/',
-    id: 'project1',
-  },
-  {
-    name: 'Bio Quiz',
-    description: 'Interactive bio 101 quiz.',
-    link: 'https://biq-quiz.vercel.app/',
-    id: 'project2',
-  },
-  {
-    name: 'Human Detection Interface',
-    description: 'Real Time People Detection From Your WebCam',
-    link: 'https://detection-wheat.vercel.app/',
-    id: 'project3',
-  },
-
-
-  {
-    name: 'Savvy, A Social Media Template',
-    description: 'Create an account, login, create posts and share ideas',
-    link: "https://talk-ochre-eight.vercel.app/",
-    id: 'project4',
-  },
-];
 
 export default function Portfolio() {
   return (
     <main className="bg-white dark:bg-slate-950 min-h-screen p-6 md:p-12 text-slate-900 dark:text-white">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-12">
-        
-             
+      <div className= " flex justify-content-start p-8 m-8  text-center mb-12">
+        <Link href="/resume" className="text-blue-600 dark:text-blue-400 hover:underline text-lg font-semibold mr-6">
+          Resume
+        </Link>
+        <Link href="/projects" className="text-blue-600 dark:text-blue-400 hover:underline text-lg font-semibold">
+          Projects
+        </Link>
+      </div>
 
           {/* Certifications Section */}
           <section className="mb-20">
@@ -88,7 +65,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Cybersecurity Skills
+              Security Skills
             </motion.h2>
             <div className="grid md:grid-cols-3 gap-8">
               {cyberSkills.map((skill) => (
@@ -125,7 +102,6 @@ export default function Portfolio() {
             </motion.div>
           </section>
 
-        
         {/* Social Links */}
           <section className="mt-20 pt-12 border-t border-slate-200 dark:border-slate-800">
             <motion.h2

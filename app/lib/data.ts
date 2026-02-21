@@ -49,7 +49,7 @@ export const certifications: Certification[] = [
   {
     name: 'Network+ Certification',
     status: 'In Progress',
-    date: 'February 2026',
+    date: 'March 2026',
     description: 'Network infrastructure, operations, security, and troubleshooting',
     id: 'net-plus'
   },
